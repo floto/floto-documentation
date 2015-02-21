@@ -95,8 +95,12 @@ pygments_style = 'sphinx'
 
 
 # -- Options for HTML output ----------------------------------------------
-html_theme = "sphinx_rtd_theme"
-html_theme_path = ["_themes" ]
+import os
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+
+if not on_rtd:  # only import and set the theme if we're building docs locally
+  html_theme = "sphinx_rtd_theme"
+  html_theme_path = ["_themes" ]
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.

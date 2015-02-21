@@ -119,10 +119,17 @@ These steps translate directly to Dockerfile build steps.
    
    :param command: the command to run when the container is started
    
+
+Utility functions
+-----------------
+
+The following utility functions are provided.
    
+.. function:: include(filename)
+
+   Include another JavaScript file.This can be used to distribute the system description across several files.   
    
-   
-   
+   :param filename: the filename of the script file to include
 
    
 

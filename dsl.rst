@@ -101,6 +101,12 @@ These steps translate directly to Dockerfile build steps.
    :param hostPath: the path on the host system
    :param containerPath: the target path inside the container
    
+.. function:: user(user)
+
+   Executes all following run and cmd commands with the given user instead of root
+
+   :param user: name or id of the user which will run the commands
+   
 .. function:: addTemplate(templatePath, destinationPath, templateConfig)
 
    Use a file as template and copy it to the image
@@ -108,6 +114,13 @@ These steps translate directly to Dockerfile build steps.
    :param templatePath: path to the Freemarker template file in the system running floto
    :param destinationPath: the destination path in the image
    :param templateConfig: an object used to fill in template parameters
+   
+.. function:: addFile(filePath, destinationPath)
+
+   Copy a file to the image
+
+   :param filePath: path to the file in the system running floto
+   :param destinationPath: the destination path in the image
    
 .. function:: cmd(command)
 
